@@ -34,6 +34,11 @@ public class UserLogic: IUserLogic
         return created;
     }
 
+    public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters)
+    {
+        return userDao.GetAsync(searchParameters);
+    }
+
     public static void ValidateDate(UserCreationDto userCreationDto)// denne metode bruger vi til at validere vores data.
     {
         string userName = userCreationDto.UserName;
