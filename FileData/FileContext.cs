@@ -44,8 +44,11 @@ public class FileContext // denne klasse er for at læse og skrive til filen.
     
     public void SaveChanges()
     {
-        string serialized = JsonSerializer.Serialize(dataContainer); // serializer filen.(gør det til json)
-        File.WriteAllText(filePath, serialized);// skriver til filen.
-        dataContainer = null;// sætter dataContainer til null.
+        string serialized = JsonSerializer.Serialize(dataContainer, new JsonSerializerOptions
+        {
+            WriteIndented = true
+        });
+        File.WriteAllText(filePath, serialized);
+        dataContainer = null;
     }
-}
+    }
