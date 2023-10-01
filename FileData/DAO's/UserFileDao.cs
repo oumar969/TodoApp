@@ -47,4 +47,13 @@ public class UserFileDao : IUSerDao
 
         return Task.FromResult(users);
     }
+
+    public Task<User?> GetByIdAsync(int id)
+    {
+        // Hent brugeren med det givne id fra databasen
+        User existing = context.Users.FirstOrDefault(u => u.Id == id);
+
+        // Returner brugeren som en færdig opgave
+        return Task.FromResult(existing);
+    }
 }
