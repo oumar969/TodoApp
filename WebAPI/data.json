@@ -1,0 +1,76 @@
+{
+  "Users": [
+    {
+      "Id": 0,
+      "UserName": "Omar",
+      "Todos": null
+    },
+    {
+      "Id": 0,
+      "UserName": "Ali",
+      "Todos": null
+    },
+    {
+      "Id": 1,
+      "UserName": "ola",
+      "Todos": null
+    },
+    {
+      "Id": 2,
+      "UserName": "amer",
+      "Todos": null
+    }
+  ],
+  "Todos": [
+    {
+      "Id": 3,
+      "Owner": {
+        "Id": 0,
+        "UserName": "Omar",
+        "Todos": null
+      },
+      "Title": "string",
+      "IsCompleted": false
+    },
+    {
+      "Id": 4,
+      "Owner": {
+        "Id": 0,
+        "UserName": "Omar",
+        "Todos": null
+      },
+      "Title": "asda",
+      "IsCompleted": false
+    },
+    {
+      "Id": 5,
+      "Owner": {
+        "Id": 0,
+        "UserName": "Omar",
+        "Todos": null
+      },
+      "Title": "bad times",
+      "IsCompleted": false
+    },
+    {
+      "Id": 3,
+      "Owner": {
+        "Id": 0,
+        "UserName": "Omar",
+        "Todos": null
+      },
+      "Title": "String",
+      "IsCompleted": true
+    },
+    {
+      "Id": 3,
+      "Owner": {
+        "Id": 0,
+        "UserName": "Omar",
+        "Todos": null
+      },
+      "Title": "String",
+      "IsCompleted": false
+    }
+  ]
+}

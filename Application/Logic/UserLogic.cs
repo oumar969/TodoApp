@@ -39,6 +39,11 @@ public class UserLogic: IUserLogic
         return userDao.GetAsync(searchParameters);
     }
 
+    public Task DeleteAsync(int id)
+    {
+        return userDao.DeleteAsync(id);
+    }
+
     public static void ValidateDate(UserCreationDto userCreationDto)// denne metode bruger vi til at validere vores data.
     {
         string userName = userCreationDto.UserName;

@@ -9,4 +9,7 @@ public interface IUSerDao // denne klasse er en interface, som vi bruger til at 
     Task<User?> GetByUserNameAsync(string userName);// vi bruger ? fordi vi ikke er sikre på at vi får en User tilbage.
     public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters);
     Task<User?> GetByIdAsync(int id);
+    
+    Task DeleteAsync(int id);
+
 }

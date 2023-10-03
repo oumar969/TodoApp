@@ -21,6 +21,7 @@ public class UserFileDao : IUSerDao
             userId = context.Users.Max(u => u.Id);
             userId++;
         }
+        user.Id = userId;
 
         context.Users.Add(user);
             context.SaveChanges();
@@ -55,5 +56,18 @@ public class UserFileDao : IUSerDao
 
         // Returner brugeren som en færdig opgave
         return Task.FromResult(existing);
+    }
+
+    public Task DeleteAsync(int id)
+    {
+        User? existing = context.Users.FirstOrDefault(u => u.Id == id);
+        if (existing == null)
+        {
+            throw new Exception($"User with ID {id} not found!");
+        }
+
+        context.Users.Remove(existing);
+        context.SaveChanges();
+        return Task.CompletedTask;
     }
 }
