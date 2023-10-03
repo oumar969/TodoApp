@@ -30,4 +30,53 @@ public class TodosController : ControllerBase // ControllerBase er en klasse, so
         }
     }
     
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Todo>>> GetAsync([FromQuery] string? username, [FromQuery] int? userId,
+        [FromQuery] bool? completedStatus, [FromQuery] string? titleContains)
+    {// IEnumerable er en liste, som vi bruger til at gemme vores data.
+        
+            try
+            {
+                SearchTodoParametersDto parameters = new(username, userId, completedStatus, titleContains); //parameters er vores søgeparametre.
+                var todos = await todoLogic.GetAsync(parameters);//todoLogic er vores logik, som vi bruger til at lave vores metoder.
+                return Ok(todos);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+    }
+    
+    [HttpPatch]
+    public async Task<ActionResult> UpdateAsync([FromBody] TodoUpdateDto dto)
+    {
+        try
+        {
+            await todoLogic.UpdateAsync(dto); //await betyder, at vi venter på, at vores metode er færdig. //todoLogic er vores logik, som vi bruger til at lave vores metoder. //updateAsync er vores metode, som vi bruger til at opdatere vores data.
+            return Ok();//Ok betyder, at vi har fået en succesfuld request. 
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpDelete("{id:int}")]
+    public async Task<ActionResult> DeleteAsync([FromBody] int id)
+    {
+        try
+        {
+            await todoLogic.DeleteAsync(id);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+        
+    
 }
