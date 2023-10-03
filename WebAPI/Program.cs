@@ -20,6 +20,13 @@ builder.Services.AddScoped<IUserLogic, UserLogic>();
 builder.Services.AddScoped<ITodoDao, TodoFileDao>();
 builder.Services.AddScoped<ITodoLogic, TodoLogic>();
 
+builder.Services.AddScoped(
+    sp => 
+        new HttpClient { 
+            BaseAddress = new Uri("https://localhost:7093") 
+        }
+);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +35,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) // allow any origin
+    .AllowCredentials());
 
 app.UseHttpsRedirection();
 
