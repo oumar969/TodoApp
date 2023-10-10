@@ -31,5 +31,16 @@
       "Todos": null
     }
   ],
-  "Todos": []
+  "Todos": [
+    {
+      "Id": 1,
+      "Owner": {
+        "Id": 2,
+        "UserName": "Oumar",
+        "Todos": null
+      },
+      "Title": "do not be ",
+      "IsCompleted": false
+    }
+  ]
 }
