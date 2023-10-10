@@ -2,75 +2,34 @@
   "Users": [
     {
       "Id": 0,
-      "UserName": "Omar",
-      "Todos": null
-    },
-    {
-      "Id": 0,
-      "UserName": "Ali",
+      "UserName": "OKK",
       "Todos": null
     },
     {
       "Id": 1,
-      "UserName": "ola",
+      "UserName": "wertyj",
       "Todos": null
     },
     {
       "Id": 2,
-      "UserName": "amer",
+      "UserName": "Oumar",
       "Todos": null
-    }
-  ],
-  "Todos": [
+    },
     {
       "Id": 3,
-      "Owner": {
-        "Id": 0,
-        "UserName": "Omar",
-        "Todos": null
-      },
-      "Title": "string",
-      "IsCompleted": false
+      "UserName": "Css",
+      "Todos": null
     },
     {
       "Id": 4,
-      "Owner": {
-        "Id": 0,
-        "UserName": "Omar",
-        "Todos": null
-      },
-      "Title": "asda",
-      "IsCompleted": false
+      "UserName": "sdd",
+      "Todos": null
     },
     {
       "Id": 5,
-      "Owner": {
-        "Id": 0,
-        "UserName": "Omar",
-        "Todos": null
-      },
-      "Title": "bad times",
-      "IsCompleted": false
-    },
-    {
-      "Id": 3,
-      "Owner": {
-        "Id": 0,
-        "UserName": "Omar",
-        "Todos": null
-      },
-      "Title": "String",
-      "IsCompleted": true
-    },
-    {
-      "Id": 3,
-      "Owner": {
-        "Id": 0,
-        "UserName": "Omar",
-        "Todos": null
-      },
-      "Title": "String",
-      "IsCompleted": false
+      "UserName": "Abdullah",
+      "Todos": null
     }
-  ]
+  ],
+  "Todos": []
 }
