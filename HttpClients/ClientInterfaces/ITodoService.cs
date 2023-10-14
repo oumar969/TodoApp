@@ -12,4 +12,9 @@ public interface ITodoService
         bool? completedStatus, 
         string? titleContains
     );
+    
+    Task UpdateAsync(TodoUpdateDto dto);
+
+    Task<TodoBasicDto> GetByIdAsync(int id);
+
 }
