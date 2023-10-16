@@ -80,7 +80,8 @@ public class TodoFileDao : ITodoDao
     public Task<Todo> GetByIdAsync(int id)
     {
         Todo? existing = context.Todos.FirstOrDefault(t => t.Id == id);
-        return Task.FromResult(existing);    }
+        return Task.FromResult(existing);    
+    }
 
     public Task DeleteAsync(int id)
     {

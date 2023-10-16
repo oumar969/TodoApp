@@ -55,9 +55,30 @@ public class TodoHttpClient : ITodoService
         }
     }
 
-    public Task<TodoBasicDto> GetByIdAsync(int id)
+    public async Task<TodoBasicDto> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        HttpResponseMessage response = await client.GetAsync($"/todos/{id}");
+        string content = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(content);
+        }
+
+        TodoBasicDto todo = JsonSerializer.Deserialize<TodoBasicDto>(content, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
+        return todo;
+    }
+
+    public async Task DeleteAsync(int id)
+    {
+        HttpResponseMessage response = await client.DeleteAsync($"/todos/{id}");
+        if (!response.IsSuccessStatusCode)
+        {
+            string content = await response.Content.ReadAsStringAsync();
+            throw new Exception(content);
+        }
     }
 
     private static string ConstructQuery(string? userName, int? userId, bool? completedStatus, string? titleContains)

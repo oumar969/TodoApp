@@ -33,16 +33,6 @@
   ],
   "Todos": [
     {
-      "Id": 2,
-      "Owner": {
-        "Id": 0,
-        "UserName": "OKK",
-        "Todos": null
-      },
-      "Title": "sad",
-      "IsCompleted": true
-    },
-    {
       "Id": 3,
       "Owner": {
         "Id": 0,
@@ -90,6 +80,16 @@
         "Todos": null
       },
       "Title": "asd",
+      "IsCompleted": true
+    },
+    {
+      "Id": 2,
+      "Owner": {
+        "Id": 2,
+        "UserName": "Oumar",
+        "Todos": null
+      },
+      "Title": "Bad",
       "IsCompleted": true
     }
   ]

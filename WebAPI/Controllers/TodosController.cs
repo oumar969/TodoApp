@@ -83,8 +83,9 @@ public class TodosController : ControllerBase // ControllerBase er en klasse, so
     {
         try
         {
-            TodoBasicDto result = await todoLogic.GetByIdAsync(id);
-            return Ok(result);
+            TodoBasicDto todo = await todoLogic.GetByIdAsync(id);
+            return Ok(todo);
+    
         }
         catch (Exception e)
         {
