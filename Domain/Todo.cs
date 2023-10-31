@@ -1,11 +1,12 @@
-﻿namespace Domain;
+﻿using Domain;
 
 public class Todo
 {
     public int Id { get; set; }
-    public User Owner { get;  }
-    public string Title { get; }
-    public bool IsCompleted { get; set;}
+    public User Owner { get; private set; }
+    public string Title { get; private set; }
+
+    public bool IsCompleted { get; set; }
 
     public Todo(User owner, string title)
     {
@@ -13,4 +14,5 @@ public class Todo
         Title = title;
     }
     
+    private Todo(){}
 }

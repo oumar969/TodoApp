@@ -12,6 +12,8 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<IUserService, UserHttpClient>();
 builder.Services.AddScoped<ITodoService, TodoHttpClient>();
+
+
 builder.Services.AddScoped(
     sp => 
         new HttpClient { 

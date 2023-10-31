@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClients", "HttpClients\
 		{46F97D28-23B0-479B-95ED-E890BBC322A8} = {46F97D28-23B0-479B-95ED-E890BBC322A8}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfcDataAccess", "EfcDataAccess\EfcDataAccess.csproj", "{D9559100-6720-4725-8AE7-8643821F4959}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{1D0C7AEE-1C8C-447D-AA7A-D94993E85773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D0C7AEE-1C8C-447D-AA7A-D94993E85773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D0C7AEE-1C8C-447D-AA7A-D94993E85773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9559100-6720-4725-8AE7-8643821F4959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9559100-6720-4725-8AE7-8643821F4959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9559100-6720-4725-8AE7-8643821F4959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9559100-6720-4725-8AE7-8643821F4959}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

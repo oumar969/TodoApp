@@ -29,19 +29,14 @@
       "Id": 5,
       "UserName": "Abdullah",
       "Todos": null
+    },
+    {
+      "Id": 6,
+      "UserName": "asdasd",
+      "Todos": null
     }
   ],
   "Todos": [
-    {
-      "Id": 3,
-      "Owner": {
-        "Id": 0,
-        "UserName": "OKK",
-        "Todos": null
-      },
-      "Title": "sas",
-      "IsCompleted": true
-    },
     {
       "Id": 6,
       "Owner": {
@@ -90,6 +85,16 @@
         "Todos": null
       },
       "Title": "Bad",
+      "IsCompleted": true
+    },
+    {
+      "Id": 6,
+      "Owner": {
+        "Id": 2,
+        "UserName": "Oumar",
+        "Todos": null
+      },
+      "Title": "asd",
       "IsCompleted": true
     }
   ]
